@@ -22,6 +22,13 @@ void EmptyLinkFunctionForGeneratedCodecppThirdPersonTestCharacter() {}
 	ENHANCEDINPUT_API UClass* Z_Construct_UClass_UInputMappingContext_NoRegister();
 	UPackage* Z_Construct_UPackage__Script_cppThirdPersonTest();
 // End Cross Module References
+	DEFINE_FUNCTION(AcppThirdPersonTestCharacter::execShoot)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->Shoot();
+		P_NATIVE_END;
+	}
 	DEFINE_FUNCTION(AcppThirdPersonTestCharacter::execendBlock)
 	{
 		P_FINISH;
@@ -90,6 +97,7 @@ void EmptyLinkFunctionForGeneratedCodecppThirdPersonTestCharacter() {}
 			{ "Heal", &AcppThirdPersonTestCharacter::execHeal },
 			{ "healArmor", &AcppThirdPersonTestCharacter::exechealArmor },
 			{ "OnOverlapBegin", &AcppThirdPersonTestCharacter::execOnOverlapBegin },
+			{ "Shoot", &AcppThirdPersonTestCharacter::execShoot },
 			{ "StartHealing", &AcppThirdPersonTestCharacter::execStartHealing },
 		};
 		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
@@ -317,6 +325,28 @@ void EmptyLinkFunctionForGeneratedCodecppThirdPersonTestCharacter() {}
 		}
 		return ReturnFunction;
 	}
+	struct Z_Construct_UFunction_AcppThirdPersonTestCharacter_Shoot_Statics
+	{
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UECodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AcppThirdPersonTestCharacter_Shoot_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "cppThirdPersonTestCharacter.h" },
+	};
+#endif
+	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_AcppThirdPersonTestCharacter_Shoot_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AcppThirdPersonTestCharacter, nullptr, "Shoot", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04080401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_AcppThirdPersonTestCharacter_Shoot_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_AcppThirdPersonTestCharacter_Shoot_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_AcppThirdPersonTestCharacter_Shoot()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_AcppThirdPersonTestCharacter_Shoot_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
 	struct Z_Construct_UFunction_AcppThirdPersonTestCharacter_StartHealing_Statics
 	{
 #if WITH_METADATA
@@ -460,6 +490,10 @@ void EmptyLinkFunctionForGeneratedCodecppThirdPersonTestCharacter() {}
 #endif
 		static void NewProp_isBlocking_SetBit(void* Obj);
 		static const UECodeGen_Private::FBoolPropertyParams NewProp_isBlocking;
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_GunCoolDown_MetaData[];
+#endif
+		static const UECodeGen_Private::FFloatPropertyParams NewProp_GunCoolDown;
 		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UECodeGen_Private::FClassParams ClassParams;
@@ -475,6 +509,7 @@ void EmptyLinkFunctionForGeneratedCodecppThirdPersonTestCharacter() {}
 		{ &Z_Construct_UFunction_AcppThirdPersonTestCharacter_Heal, "Heal" }, // 529442119
 		{ &Z_Construct_UFunction_AcppThirdPersonTestCharacter_healArmor, "healArmor" }, // 275171410
 		{ &Z_Construct_UFunction_AcppThirdPersonTestCharacter_OnOverlapBegin, "OnOverlapBegin" }, // 3722800556
+		{ &Z_Construct_UFunction_AcppThirdPersonTestCharacter_Shoot, "Shoot" }, // 3087354906
 		{ &Z_Construct_UFunction_AcppThirdPersonTestCharacter_StartHealing, "StartHealing" }, // 581724119
 	};
 #if WITH_METADATA
@@ -736,6 +771,13 @@ void EmptyLinkFunctionForGeneratedCodecppThirdPersonTestCharacter() {}
 		((AcppThirdPersonTestCharacter*)Obj)->isBlocking = 1;
 	}
 	const UECodeGen_Private::FBoolPropertyParams Z_Construct_UClass_AcppThirdPersonTestCharacter_Statics::NewProp_isBlocking = { "isBlocking", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, sizeof(bool), sizeof(AcppThirdPersonTestCharacter), &Z_Construct_UClass_AcppThirdPersonTestCharacter_Statics::NewProp_isBlocking_SetBit, METADATA_PARAMS(Z_Construct_UClass_AcppThirdPersonTestCharacter_Statics::NewProp_isBlocking_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AcppThirdPersonTestCharacter_Statics::NewProp_isBlocking_MetaData)) };
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AcppThirdPersonTestCharacter_Statics::NewProp_GunCoolDown_MetaData[] = {
+		{ "Category", "cppThirdPersonTestCharacter" },
+		{ "ModuleRelativePath", "cppThirdPersonTestCharacter.h" },
+	};
+#endif
+	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AcppThirdPersonTestCharacter_Statics::NewProp_GunCoolDown = { "GunCoolDown", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(AcppThirdPersonTestCharacter, GunCoolDown), METADATA_PARAMS(Z_Construct_UClass_AcppThirdPersonTestCharacter_Statics::NewProp_GunCoolDown_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AcppThirdPersonTestCharacter_Statics::NewProp_GunCoolDown_MetaData)) };
 	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AcppThirdPersonTestCharacter_Statics::PropPointers[] = {
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AcppThirdPersonTestCharacter_Statics::NewProp_CameraBoom,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AcppThirdPersonTestCharacter_Statics::NewProp_FollowCamera,
@@ -762,6 +804,7 @@ void EmptyLinkFunctionForGeneratedCodecppThirdPersonTestCharacter() {}
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AcppThirdPersonTestCharacter_Statics::NewProp_canAim,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AcppThirdPersonTestCharacter_Statics::NewProp_isJumping,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AcppThirdPersonTestCharacter_Statics::NewProp_isBlocking,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AcppThirdPersonTestCharacter_Statics::NewProp_GunCoolDown,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_AcppThirdPersonTestCharacter_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<AcppThirdPersonTestCharacter>::IsAbstract,
@@ -800,9 +843,9 @@ void EmptyLinkFunctionForGeneratedCodecppThirdPersonTestCharacter() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_samue_Documents_Unreal_Projects_cppThirdPersonTest_Source_cppThirdPersonTest_cppThirdPersonTestCharacter_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_AcppThirdPersonTestCharacter, AcppThirdPersonTestCharacter::StaticClass, TEXT("AcppThirdPersonTestCharacter"), &Z_Registration_Info_UClass_AcppThirdPersonTestCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AcppThirdPersonTestCharacter), 2418072589U) },
+		{ Z_Construct_UClass_AcppThirdPersonTestCharacter, AcppThirdPersonTestCharacter::StaticClass, TEXT("AcppThirdPersonTestCharacter"), &Z_Registration_Info_UClass_AcppThirdPersonTestCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AcppThirdPersonTestCharacter), 553519045U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_samue_Documents_Unreal_Projects_cppThirdPersonTest_Source_cppThirdPersonTest_cppThirdPersonTestCharacter_h_1657205735(TEXT("/Script/cppThirdPersonTest"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_samue_Documents_Unreal_Projects_cppThirdPersonTest_Source_cppThirdPersonTest_cppThirdPersonTestCharacter_h_3271840149(TEXT("/Script/cppThirdPersonTest"),
 		Z_CompiledInDeferFile_FID_Users_samue_Documents_Unreal_Projects_cppThirdPersonTest_Source_cppThirdPersonTest_cppThirdPersonTestCharacter_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_samue_Documents_Unreal_Projects_cppThirdPersonTest_Source_cppThirdPersonTest_cppThirdPersonTestCharacter_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

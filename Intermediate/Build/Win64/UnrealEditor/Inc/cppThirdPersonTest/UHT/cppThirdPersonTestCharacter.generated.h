@@ -20,6 +20,7 @@ struct FHitResult;
 #define FID_Users_samue_Documents_Unreal_Projects_cppThirdPersonTest_Source_cppThirdPersonTest_cppThirdPersonTestCharacter_h_15_SPARSE_DATA
 #define FID_Users_samue_Documents_Unreal_Projects_cppThirdPersonTest_Source_cppThirdPersonTest_cppThirdPersonTestCharacter_h_15_RPC_WRAPPERS \
  \
+	DECLARE_FUNCTION(execShoot); \
 	DECLARE_FUNCTION(execendBlock); \
 	DECLARE_FUNCTION(execblock); \
 	DECLARE_FUNCTION(exechealArmor); \
@@ -31,6 +32,7 @@ struct FHitResult;
 
 #define FID_Users_samue_Documents_Unreal_Projects_cppThirdPersonTest_Source_cppThirdPersonTest_cppThirdPersonTestCharacter_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
  \
+	DECLARE_FUNCTION(execShoot); \
 	DECLARE_FUNCTION(execendBlock); \
 	DECLARE_FUNCTION(execblock); \
 	DECLARE_FUNCTION(exechealArmor); \

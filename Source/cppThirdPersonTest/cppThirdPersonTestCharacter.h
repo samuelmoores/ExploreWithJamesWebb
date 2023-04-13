@@ -82,6 +82,8 @@ public:
 
 	int jumpCount = 0;
 
+	float lastFireTime = 0.0f;
+
 	UPROPERTY(BlueprintReadWrite)
 	bool isPunching = false;
 
@@ -114,6 +116,9 @@ public:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	bool isBlocking = false;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	float GunCoolDown = 0.5f;
 
 
 protected:
@@ -161,6 +166,9 @@ protected:
 
 	UFUNCTION(BlueprintCallable)
 	void endBlock();
+
+	UFUNCTION(BlueprintCallable)
+	void Shoot();
 	
 protected:
 	// APawn interface
