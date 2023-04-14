@@ -395,15 +395,7 @@ void AcppThirdPersonTestCharacter::Shoot()
 
 	if(GetWorld()->GetTimeSeconds() - lastFireTime >= GunCoolDown)
 	{
-		UStaticMeshComponent* BulletRef = Cast<UStaticMeshComponent>(GetDefaultSubobjectByName(TEXT("bulletRef")));
-		FRotator BulletRefRot = BulletRef->GetComponentRotation();
-
-		FRotator CharacterRot = GetOwner()->GetActorRotation();
-
-		const FVector StartLocation = BulletRef->GetComponentLocation();
-		const FVector EndLocation = StartLocation + BulletRef->GetForwardVector().RotateAngleAxis(90.0f, FVector(0.0f, 0.0f, 1.0f)) + BulletRef->GetComponentRotation().RotateVector(FVector::ForwardVector) * 10000;
 		
-		DrawDebugLine(GetWorld(), StartLocation, EndLocation, FColor::Green, false, 0.1f, 0, 5.0f);
 
 		lastFireTime = GetWorld()->GetTimeSeconds();
 		
