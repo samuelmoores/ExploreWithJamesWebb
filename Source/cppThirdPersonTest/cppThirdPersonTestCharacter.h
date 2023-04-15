@@ -118,7 +118,7 @@ public:
 	bool isBlocking = false;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	float GunCoolDown = 0.5f;
+	float GunCoolDown = 0.2f;
 
 
 protected:
