@@ -131,7 +131,7 @@ void AcppThirdPersonTestCharacter::Move(const FInputActionValue& Value)
 	// input is a Vector2D
 	FVector2D MovementVector = Value.Get<FVector2D>();
 
-	if (Controller != nullptr)
+	if (Controller != nullptr && !isDead)
 	{
 		// find out which way is forward
 		const FRotator Rotation = Controller->GetControlRotation();
@@ -242,7 +242,7 @@ void AcppThirdPersonTestCharacter::Aim(const FInputActionValue& Value)
 	{
 		isAiming = true;
 
-		CameraBoom->TargetArmLength = 275.0f;
+		CameraBoom->TargetArmLength = 250.0f;
 
 		FollowCamera->bUsePawnControlRotation = true;
 		bUseControllerRotationYaw = true;
