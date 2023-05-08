@@ -49,6 +49,7 @@ void ACPP_Enemy::takeDamage(float damageAmount)
 	{
 		isDead = true;
 
+		spawnEnemy = true;
 		GetCharacterMovement()->MaxWalkSpeed = 0.0f;
 		
 
@@ -67,4 +68,6 @@ void ACPP_Enemy::Attack()
 {
 	isAttacking = true;
 }
+
+
 

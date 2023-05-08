@@ -119,6 +119,11 @@ void EmptyLinkFunctionForGeneratedCodeCPP_Enemy() {}
 		static void NewProp_isHit_SetBit(void* Obj);
 		static const UECodeGen_Private::FBoolPropertyParams NewProp_isHit;
 #if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_spawnEnemy_MetaData[];
+#endif
+		static void NewProp_spawnEnemy_SetBit(void* Obj);
+		static const UECodeGen_Private::FBoolPropertyParams NewProp_spawnEnemy;
+#if WITH_METADATA
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_isAttacking_MetaData[];
 #endif
 		static void NewProp_isAttacking_SetBit(void* Obj);
@@ -174,6 +179,17 @@ void EmptyLinkFunctionForGeneratedCodeCPP_Enemy() {}
 	}
 	const UECodeGen_Private::FBoolPropertyParams Z_Construct_UClass_ACPP_Enemy_Statics::NewProp_isHit = { "isHit", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, sizeof(bool), sizeof(ACPP_Enemy), &Z_Construct_UClass_ACPP_Enemy_Statics::NewProp_isHit_SetBit, METADATA_PARAMS(Z_Construct_UClass_ACPP_Enemy_Statics::NewProp_isHit_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ACPP_Enemy_Statics::NewProp_isHit_MetaData)) };
 #if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ACPP_Enemy_Statics::NewProp_spawnEnemy_MetaData[] = {
+		{ "Category", "CPP_Enemy" },
+		{ "ModuleRelativePath", "CPP_Enemy.h" },
+	};
+#endif
+	void Z_Construct_UClass_ACPP_Enemy_Statics::NewProp_spawnEnemy_SetBit(void* Obj)
+	{
+		((ACPP_Enemy*)Obj)->spawnEnemy = 1;
+	}
+	const UECodeGen_Private::FBoolPropertyParams Z_Construct_UClass_ACPP_Enemy_Statics::NewProp_spawnEnemy = { "spawnEnemy", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, sizeof(bool), sizeof(ACPP_Enemy), &Z_Construct_UClass_ACPP_Enemy_Statics::NewProp_spawnEnemy_SetBit, METADATA_PARAMS(Z_Construct_UClass_ACPP_Enemy_Statics::NewProp_spawnEnemy_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ACPP_Enemy_Statics::NewProp_spawnEnemy_MetaData)) };
+#if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ACPP_Enemy_Statics::NewProp_isAttacking_MetaData[] = {
 		{ "Category", "CPP_Enemy" },
 		{ "ModuleRelativePath", "CPP_Enemy.h" },
@@ -188,6 +204,7 @@ void EmptyLinkFunctionForGeneratedCodeCPP_Enemy() {}
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACPP_Enemy_Statics::NewProp_health,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACPP_Enemy_Statics::NewProp_isDead,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACPP_Enemy_Statics::NewProp_isHit,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACPP_Enemy_Statics::NewProp_spawnEnemy,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACPP_Enemy_Statics::NewProp_isAttacking,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_ACPP_Enemy_Statics::StaticCppClassTypeInfo = {
@@ -227,9 +244,9 @@ void EmptyLinkFunctionForGeneratedCodeCPP_Enemy() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_samue_Documents_Unreal_Projects_cppThirdPersonTest_Source_cppThirdPersonTest_CPP_Enemy_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_ACPP_Enemy, ACPP_Enemy::StaticClass, TEXT("ACPP_Enemy"), &Z_Registration_Info_UClass_ACPP_Enemy, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ACPP_Enemy), 871712435U) },
+		{ Z_Construct_UClass_ACPP_Enemy, ACPP_Enemy::StaticClass, TEXT("ACPP_Enemy"), &Z_Registration_Info_UClass_ACPP_Enemy, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ACPP_Enemy), 199022846U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_samue_Documents_Unreal_Projects_cppThirdPersonTest_Source_cppThirdPersonTest_CPP_Enemy_h_153404590(TEXT("/Script/cppThirdPersonTest"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_samue_Documents_Unreal_Projects_cppThirdPersonTest_Source_cppThirdPersonTest_CPP_Enemy_h_3384673812(TEXT("/Script/cppThirdPersonTest"),
 		Z_CompiledInDeferFile_FID_Users_samue_Documents_Unreal_Projects_cppThirdPersonTest_Source_cppThirdPersonTest_CPP_Enemy_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_samue_Documents_Unreal_Projects_cppThirdPersonTest_Source_cppThirdPersonTest_CPP_Enemy_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

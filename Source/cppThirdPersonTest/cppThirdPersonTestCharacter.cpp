@@ -278,7 +278,6 @@ void AcppThirdPersonTestCharacter::Punch(const FInputActionValue& Value)
 	if(!isDead) 
 	{
 		isPunching = true;
-		UE_LOG(LogTemp, Error, TEXT("Odoyle Rules"));
 	}
 }
 

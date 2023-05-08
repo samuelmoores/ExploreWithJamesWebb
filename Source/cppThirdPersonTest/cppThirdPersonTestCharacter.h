@@ -107,7 +107,7 @@ public:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	bool isDead;
-
+	
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	bool canAim = true;
 

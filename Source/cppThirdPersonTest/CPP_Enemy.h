@@ -46,6 +46,9 @@ public:
 	void Attack();
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	bool spawnEnemy;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	bool isAttacking = false;
 
 };
