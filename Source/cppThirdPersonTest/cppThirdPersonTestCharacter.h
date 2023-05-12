@@ -103,7 +103,7 @@ public:
 	bool hasArmor = true;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	float playerArmor = 1.0f;
+	float playerArmor = 0.0f;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	bool isDead;
