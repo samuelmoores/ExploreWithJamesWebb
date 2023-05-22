@@ -211,7 +211,7 @@ void AcppThirdPersonTestCharacter::Sprint(const FInputActionValue& Value)
 	if(playerStamina > 0 && !isDead)
 	{
 		isSprinting = true;
-		playerStamina -= .0015;
+		//playerStamina -= .0015;
 		
 		if(playerStamina < 0)
 		{
@@ -242,13 +242,13 @@ void AcppThirdPersonTestCharacter::Aim(const FInputActionValue& Value)
 
 	if(canAim)
 	{
-		isAiming = true;
+		//isAiming = true;
 
-		CameraBoom->TargetArmLength = 250.0f;
+		//CameraBoom->TargetArmLength = 250.0f;
 
-		FollowCamera->bUsePawnControlRotation = true;
-		bUseControllerRotationYaw = true;
-		GetCharacterMovement()->bOrientRotationToMovement = false;
+		//FollowCamera->bUsePawnControlRotation = true;
+		//bUseControllerRotationYaw = true;
+		//GetCharacterMovement()->bOrientRotationToMovement = false;
 	}
 
 	//UE_LOG(LogTemp, Warning, TEXT("Aim Pawn Rotation: %d"), FollowCamera->bUsePawnControlRotation);
@@ -260,13 +260,13 @@ void AcppThirdPersonTestCharacter::StopAim()
 	//GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Blue, TEXT("CPP ------ Not Aiming"));
 
 
-	isAiming = false;
+	//isAiming = false;
 
-	CameraBoom->TargetArmLength = 400.0f;
+	//CameraBoom->TargetArmLength = 400.0f;
 
-	FollowCamera->bUsePawnControlRotation = false;
-	bUseControllerRotationYaw = false;
-	GetCharacterMovement()->bOrientRotationToMovement = true;
+	//FollowCamera->bUsePawnControlRotation = false;
+	//bUseControllerRotationYaw = false;
+	//GetCharacterMovement()->bOrientRotationToMovement = true;
 	
 	//UE_LOG(LogTemp, Warning, TEXT("Stop Aim Pawn Rotation: %d"), FollowCamera->bUsePawnControlRotation);
 

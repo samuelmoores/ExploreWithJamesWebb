@@ -17,13 +17,13 @@ void EmptyLinkFunctionForGeneratedCodecppThirdPersonTest_init() {}
 				nullptr,
 				0,
 				PKG_CompiledIn | 0x00000000,
-				0xDD3EFCBE,
-				0xC4AB7B2A,
+				0x83D17992,
+				0xC041C154,
 				METADATA_PARAMS(nullptr, 0)
 			};
 			UECodeGen_Private::ConstructUPackage(Z_Registration_Info_UPackage__Script_cppThirdPersonTest.OuterSingleton, PackageParams);
 		}
 		return Z_Registration_Info_UPackage__Script_cppThirdPersonTest.OuterSingleton;
 	}
-	static FRegisterCompiledInInfo Z_CompiledInDeferPackage_UPackage__Script_cppThirdPersonTest(Z_Construct_UPackage__Script_cppThirdPersonTest, TEXT("/Script/cppThirdPersonTest"), Z_Registration_Info_UPackage__Script_cppThirdPersonTest, CONSTRUCT_RELOAD_VERSION_INFO(FPackageReloadVersionInfo, 0xDD3EFCBE, 0xC4AB7B2A));
+	static FRegisterCompiledInInfo Z_CompiledInDeferPackage_UPackage__Script_cppThirdPersonTest(Z_Construct_UPackage__Script_cppThirdPersonTest, TEXT("/Script/cppThirdPersonTest"), Z_Registration_Info_UPackage__Script_cppThirdPersonTest, CONSTRUCT_RELOAD_VERSION_INFO(FPackageReloadVersionInfo, 0x83D17992, 0xC041C154));
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
